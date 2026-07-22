@@ -1,10 +1,10 @@
 :root {
-  --text: #1a1a1a;
-  --muted: #6b7280;
-  --link: #2563eb;
-  --border: #e5e7eb;
+  --text: #0f172a;
+  --muted: #475569;
+  --link: #1d4ed8;
+  --border: #d1d5db;
   --bg: #ffffff;
-  --accent-bg: #f8fafc;
+  --accent-bg: #f1f5f9;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,7 +23,7 @@ body {
   padding: 0 24px;
 }
 
-a { color: var(--link); text-decoration: none; }
+a { color: var(--link); text-decoration: none; font-weight: 500; }
 a:hover { text-decoration: underline; }
 
 /* ---------- Header ---------- */
@@ -116,7 +116,9 @@ h2 {
   height: 110px;
   flex-shrink: 0;
   border-radius: 6px;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
 }
 
 .pub-thumb.placeholder {
@@ -163,6 +165,36 @@ h2 {
 
 .exp ul { padding-left: 22px; }
 .exp li { margin-bottom: 4px; font-size: 0.95rem; }
+
+/* ---------- Industry experience ---------- */
+.job {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.job-logo {
+  width: 120px;
+  max-height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.job-logo--square {
+  max-height: 48px;
+}
+
+.job-title { font-weight: 650; font-size: 1.02rem; }
+.job-group { color: var(--muted); font-size: 0.95rem; }
+.job-desc { font-size: 0.95rem; }
+
+.course-list {
+  margin-top: 4px;
+  padding-left: 20px;
+}
+.course-list li { font-size: 0.95rem; margin-bottom: 2px; }
 
 /* ---------- Footer ---------- */
 .site-footer {
